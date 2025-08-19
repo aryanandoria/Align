@@ -14,6 +14,7 @@ const registerUser = async (req, res) => {
   try {
     const { name, email, password, profileImageUrl, adminInviteToken } =
       req.body;
+      console.log("control reached here")
 
     // Check if user already exists
     const userExists = await User.findOne({ email });
